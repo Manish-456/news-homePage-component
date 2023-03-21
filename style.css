@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Lexend+Deca&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Inter', sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 10px auto;
+
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  padding: 20px 0; 
+   position: sticky;
+   top: 0;
+   background-color: white;
+   z-index: 999;
+}
+nav > ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+nav > ul > li {
+  color: hsl(236, 13%, 42%);
+}
+
+nav > .menu {
+  display: none;
+}
+
+/* Hero section */
+main {
+  margin-top: 10px;
+  display: flex;
+}
+.main-container {
+  display: flex;
+  gap: 30px;
+  
+}
+.blog {
+  flex: 3;
+}
+.main-img {
+  width: 100%;
+  height: auto;
+}
+.blog-info{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 10px;
+  align-items: center;
+}
+.blog-title{
+  font-size: 50px;
+  color: hsl(240, 100%, 5%);
+}
+.blog-read p{
+  font-size: 15px;
+  line-height: 25px;
+  color : hsl(236, 13%, 42%)
+}
+.blog-read button{
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 17px;
+  letter-spacing: 3px;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  color: white;
+  background-color: hsl(5, 85%, 63%);
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+
+}
+.blog-read button:hover{
+  background-color:  hsl(240, 100%, 5%);
+  
+}
+.latest {
+  flex: 1;
+  
+  background-color: hsl(240, 100%, 5%);
+
+}
+.latest-Content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+.latest-Content .l-title{
+color:  hsl(35, 77%, 62%);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.content h1{
+    font-size: 18px;
+    color: white;
+}
+.content span{
+    color: hsl(233, 8%, 79%);
+    font-size: 14px;
+    word-spacing: 2px;
+    line-height: 25px;
+    
+}
+
+hr{
+    border: 1px solid gray;
+    height: 0px;
+    margin: 20px 0px 20px 0px;
+
+}
+.blog-lists{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+  margin-top: 70px;
+}
+.list{
+display: flex;
+align-items: start;
+gap: 25px;
+}
+.list img{
+  width: 100px;
+  height: 140px;
+}
+.blog-topics{
+  padding: 2px;
+}
+.blog-topics h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: hsl(233, 8%, 79%);
+}
+.blog-topics h5{
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.blog-topics span{
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-top: 35px;
+  color : hsl(236, 13%, 42%)
+}
+.attribution{
+  margin-top: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(236, 13%, 42%);
+
+}
+@media  (max-width : 1000px){
+ .container{
+  padding: 0 20px;
+ }
+ .main-container{
+  flex-direction: column;
+ }
+}
+.mobile-menu{
+ 
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    min-width: 100%;
+  }
+  .mobile-menu{
+     background: white;
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 60%;
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease-in;
+    transform: translateX(300px);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px;
+
+
+  }
+  .main-container{
+    flex-direction: column;
+  }
+  .list{
+    flex-direction: column;
+  }
+  .list .image{
+    width: 100%;
+  }
+  .image img{
+    width: 100%;
+    object-fit: cover;
+  }
+  .blog-title{
+    font-size: 30px;
+  }
+
+  nav > .menu {
+    display: block;
+  }
+  nav > ul {
+    display: none;
+  }
+}
+
+@media screen and (max-width : 500px){
+  .blog-info{
+    flex-direction: column;
+  }
+  .blog-lists{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .list{
+    flex-direction: row;
+    
+  }
+  .content span{
+  
+    font-size: 12px;
+    word-spacing: 0px;
+    line-height: 21px;
+  }
+  .blog-topics h5 {
+    margin-bottom: 10px;
+    font-size: 14px;}
+    .blog-topics span {
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+      margin-top: 35px;
+      color: hsl(236, 13%, 42%);
+  }
+  .blog-topics h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: hsl(233, 8%, 79%);}  
+}
